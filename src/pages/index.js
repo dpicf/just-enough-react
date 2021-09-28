@@ -1,6 +1,6 @@
-// Импортируем React и зависимости маршрутизации
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Layout from '../components/Layout';
 
 // импорт маршрутов
 import Home from './home';
@@ -9,13 +9,15 @@ import Favorites from './favorites';
 
 // определение маршрутов
 const Pages = props => {
-  return (
-    <Router>
-      <Route exact path="/" component={Home} />
-      <Route path="/mynotes" component={MyNotes} />
-      <Route path="/favorites" component={Favorites} />
-    </Router>
-  );
+    return (
+        <Router>
+            <Layout>
+                <Route exact path="/" component={Home} />
+                <Route path="/mynotes" component={MyNotes} />
+                <Route path="/favorites" component={Favorites} />
+            </Layout>
+        </Router>
+    );
 };
 
 export default Pages;

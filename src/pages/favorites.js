@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react';
 
 const Favorites = () => {
-  useEffect(() => {
-    document.title = 'Favorites — Notedly';
-  });
+    useEffect(() => {
+        document.title = 'Favorites — Notedly';
+    });
 
-  return (
-    <div>
-      <h1>Notedly</h1>
-      <p>Избранные заметки</p>
-    </div>
-  );
+    return (
+        <div>
+            <p>These are my Favorites</p>
+        </div>
+    );
 };
 
 export default Favorites;

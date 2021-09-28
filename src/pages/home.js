@@ -1,16 +1,14 @@
 import React from 'react';
 
-import Header from '../components/Header';
-import Navigation from '../components/Navigation';
+import Button from '../components/Button';
 
 const Home = () => {
-  return (
-    <div>
-      <Header />
-      <Navigation />
-      <p>Это домашняя страница</p>
-    </div>
-  );
+    return (
+        <div>
+            <p>Домашняя страница</p>
+            <Button>Нажми меня нежно</Button>
+        </div>
+    );
 };
 
 export default Home;

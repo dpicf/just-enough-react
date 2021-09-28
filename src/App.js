@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import GlobalStyle from '/components/GlobalStyle';
+
 // импорт маршрутов
 import Pages from '/pages';
 
 const App = () => {
-  return (
-    <div>
-      <Pages />
-    </div>
-  );
+    return (
+        <div>
+            <GlobalStyle />
+            <Pages />
+        </div>
+    );
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
