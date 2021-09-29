@@ -50,7 +50,7 @@ const Navigation = () => {
             <span aria-hidden="true" role="img">
               🏠
             </span>
-              Home
+              Домашняя страница
             </Link>
           </li>
           <li>
@@ -58,7 +58,7 @@ const Navigation = () => {
             <span aria-hidden="true" role="img">
               📓
             </span>
-              My Notes
+              Мои заметки
             </Link>
           </li>
           <li>
@@ -66,7 +66,15 @@ const Navigation = () => {
             <span aria-hidden="true" role="img">
               🌟
             </span>
-              Favorites
+              Избранные
+            </Link>
+          </li>
+          <li>
+            <Link to="/new">
+            <span aria-hidden="true" role="img">
+              ➕
+            </span>
+              Новая заметка
             </Link>
           </li>
         </NavList>

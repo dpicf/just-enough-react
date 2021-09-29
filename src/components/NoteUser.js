@@ -1,0 +1,32 @@
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import { Link } from 'react-router-dom';
+
+import DeleteNote from './DeleteNote';
+import FavoriteNote from './FavoriteNote';
+import { GET_ME } from '../gql/query';
+
+const NoteUser = props => {
+  const { loading, error, data } = useQuery(GET_ME);
+  if (loading) return <p>Загрузка...</p>;
+  if (error) return <p>Ошибка!</p>;
+
+  return (
+    <React.Fragment>
+      <FavoriteNote
+        me={data.me}
+        noteId={props.note.id}
+        favoriteCount={props.note.favoriteCount}
+      />
+      <br />
+      {data.me.id === props.note.author.id && (
+        <React.Fragment>
+          <Link to={`/edit/${props.note.id}`}>Редактировать</Link> <br />
+          <DeleteNote noteId={props.note.id} />
+        </React.Fragment>
+      )}
+    </React.Fragment>
+  );
+};
+
+export default NoteUser;
